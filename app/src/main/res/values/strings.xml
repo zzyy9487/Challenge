@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Challenge</string>
+    <string name="L1">L1</string>
+    <string name="L2">L2</string>
+    <string name="L3">L3</string>
+    <string name="buy">購買</string>
+    <string name="cancel">取消</string>
+    <string name="bye">掰</string>
+    <string name="level1">Level One</string>
+    <string name="level2">Level Two</string>
+    <string name="level3">Level Three</string>
+    <string name="cash">$</string>
+    <string name="nothing"> </string>
+    <string name="sold">SOLD</string>
+    <string name="soldout">SOLD  OUT</string>
+
+</resources>

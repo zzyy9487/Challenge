@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/bg"
+        android:scaleType="fitXY"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewH"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/conLayout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#4A4A4A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewH">
+
+        <ImageView
+            android:id="@+id/imageViewName"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#00000000"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="70dp"
+            android:contentDescription=""
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="島主DON"
+            android:textColor="@android:color/white"
+            android:textSize="45dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="@id/imageViewName"
+            app:layout_constraintStart_toEndOf="@id/imageViewName"/>
+
+        <ImageView
+            android:id="@+id/imageViewMoney"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#00000000"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="70dp"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/money"
+            app:layout_constraintTop_toBottomOf="@id/imageViewName"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/textViewMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:textColor="@android:color/white"
+            android:textSize="45dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="@id/imageViewMoney"
+            app:layout_constraintStart_toEndOf="@id/imageViewMoney"/>
+
+        <Button
+            android:id="@+id/buttonShop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginEnd="40dp"
+            android:background="@layout/buttonshape"
+            android:text="進入商店"
+            android:textColor="@android:color/white"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonMagicTotalList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@layout/buttonshape"
+            android:text="魔法列表"
+            android:textColor="@android:color/white"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonShop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageKill"
+        android:layout_width="65dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="48dp"
+        android:contentDescription="@string/nothing"
+        app:srcCompat="@drawable/bugbear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"/>
+
+    <ImageView
+        android:id="@+id/imageBug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/nothing"
+        app:srcCompat="@drawable/death_knight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
