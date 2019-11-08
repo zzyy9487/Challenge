@@ -17,9 +17,10 @@ class WelcomeActivity : AppCompatActivity() {
                 startActivity(Intent(this, MainActivity::class.java))
             }
         }.start()
+
     }
 
-    override fun onBackPressed() {
-        this@WelcomeActivity.finish()
-    }
+//    override fun onBackPressed() {
+//        this@WelcomeActivity.finish()
+//    }
 }

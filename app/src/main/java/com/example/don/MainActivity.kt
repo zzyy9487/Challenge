@@ -260,7 +260,7 @@ class MainActivity : AppCompatActivity() {
         buttonShop.setOnClickListener {
             val intent = Intent(this, ShopActivity::class.java)
             startActivity(intent)
-            this@MainActivity.finish()
+//            this@MainActivity.finish()
         }
         // reset
         textViewH.setOnClickListener {
@@ -308,9 +308,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        val intent = Intent(this, WelcomeActivity::class.java)
-        startActivity(intent)
-        this@MainActivity.finish()
+    override fun onResume() {
+        super.onResume()
+        var preference = getSharedPreferences("cash", Context.MODE_PRIVATE)
+        var cash = preference.getString("cash", "")
+        if (cash.isNullOrEmpty()){
+            money = 2000
+        }
+        else{
+            money = cash.toInt()
+        }
+        textViewMoney.text = money.toString()
     }
+
 }

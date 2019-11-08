@@ -7,9 +7,10 @@
     android:overScrollMode="always"
     tools:context=".MagicActivity">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,8 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#4A4A4A"
-                android:paddingTop="10dp"
                 android:paddingStart="15dp"
+                android:paddingTop="10dp"
                 android:paddingEnd="0dp"
                 android:text="@string/level1"
                 android:textColor="@android:color/white"
@@ -31,7 +32,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerL1"
                 android:layout_width="match_parent"
-                android:layout_height="436dp"
+                android:layout_height="wrap_content"
                 android:background="#4A4A4A" />
 
             <TextView
@@ -39,8 +40,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#4A4A4A"
-                android:paddingTop="10dp"
                 android:paddingStart="15dp"
+                android:paddingTop="10dp"
                 android:paddingEnd="0dp"
                 android:text="@string/level2"
                 android:textColor="@android:color/white"
@@ -49,7 +50,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerL2"
                 android:layout_width="match_parent"
-                android:layout_height="436dp"
+                android:layout_height="wrap_content"
                 android:background="#4A4A4A" />
 
             <TextView
@@ -57,8 +58,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#4A4A4A"
-                android:paddingTop="10dp"
                 android:paddingStart="15dp"
+                android:paddingTop="10dp"
                 android:paddingEnd="0dp"
                 android:text="@string/level3"
                 android:textColor="@android:color/white"
@@ -67,11 +68,11 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerL3"
                 android:layout_width="match_parent"
-                android:layout_height="436dp"
+                android:layout_height="wrap_content"
                 android:background="#4A4A4A" />
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,7 +50,5 @@ class MagicActivity : AppCompatActivity() {
         recyclerL2.adapter = l2Adapter
         recyclerL3.adapter = l3Adapter
 
-
-
     }
 }
