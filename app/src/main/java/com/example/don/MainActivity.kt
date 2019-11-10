@@ -293,17 +293,25 @@ class MainActivity : AppCompatActivity() {
 
         imageBug.setOnClickListener {
             inputword = "$inputword" + "1"
+            if(inputword.length > 9){
+                var input = inputword.get(3).toString() + inputword.get(4).toString() + inputword.get(5).toString() + inputword.get(6).toString() + inputword.get(7).toString() + inputword.get(8).toString() + inputword.get(9).toString()
+                inputword = input
+            }
         }
 
         imageKill.setOnClickListener {
             inputword = "$inputword" + "2"
-            if (inputword.contains("1121122")) {
+            if (inputword.contains("1121122")){
                 Toast.makeText(this, "按這麼久才加100...QQ...", Toast.LENGTH_LONG).show()
                 inputword = ""
                 money = money + 100
                 textViewMoney.text = money.toString()
                 val preferenceBonus = getSharedPreferences("cash", Context.MODE_PRIVATE)
                 preferenceBonus.edit().putString("cash", money.toString()).apply()
+            }
+            else if (inputword.length > 9){
+                var input = inputword.get(3).toString() + inputword.get(4).toString() + inputword.get(5).toString() + inputword.get(6).toString() + inputword.get(7).toString() + inputword.get(8).toString() + inputword.get(9).toString()
+                inputword = input
             }
         }
     }
